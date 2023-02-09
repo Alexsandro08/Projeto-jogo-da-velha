@@ -3,7 +3,7 @@
     padding: 0px;
 }
 
-
+/*layout do site*/
 body{
     text-align: center;
     background-image: url(fundo.jpg);
@@ -13,22 +13,29 @@ body{
     font-family: Helvetica, sans-serif;
 }
 h1{
-    font-size: 8em;
+    font-size: 10em;
     font-family: 'Courier New', Courier, monospace;
     color: white;
     text-shadow: 1px 1px 5px black;
 }
+/*botões*/
 
 #botoes button{
+    background-color: white;
+    height: 70px;
     padding: 5px 10px;
-    margin: 5px;
-    border-radius: 3px;
+    margin: 20px;
+    border-radius: 20px;
     border: none;
+    font-size: 2em;
     font-family: Verdana, sans-serif;
 }
+
+/*Interface do jogo*/
+
 #container{
     display: flex;
-    width: 900px;
+    width: 90vw;
     margin: 0px;
     flex-direction: row;
     flex-wrap: wrap;
@@ -46,24 +53,100 @@ h1{
 
 #bloco1, #bloco2, #bloco3{
     border-top: none;
-  
-    
 }
 
 #bloco1,#bloco4,#bloco7 {
     border-left: none;
-    
-    
 }
 
 #bloco7, #bloco8,#bloco9{
     border-bottom: none;
-
 }
 
 #bloco3, #bloco6, #bloco9{
     border-right: none;
-    
- 
 }
 
+
+
+.x{
+    margin-top: 100px;
+    font-size: 200px;
+    color: red;
+    display: inline-block;
+    line-height: 100px;
+
+}
+.o{
+    margin-top: 70px;
+    width: 110px;
+    height: 110px;
+    border: 20px solid blue;
+    border-radius: 50%;
+    display: inline-block;
+    
+
+}
+
+
+#scoreboard{
+    background-color: white;
+    height: 7vh;
+    width: 700px;
+    border-style: solid;
+    border-color:black;
+    font-weight: bold;
+    margin-top: 300px;
+    font-size: 8em;
+    position: relative;
+    margin-left: 20px;
+    margin-right: 20px;
+    border-radius: 15px;
+}
+
+#x-scoreboard{
+    color: red;
+}
+
+#o-scoreboard{
+    display: inline-block;
+    width: 70px;
+    height: 70px;
+    border: 15px solid blue;
+    border-radius: 50%;
+
+}
+
+.box-scoreboard{
+    margin:0px 50px;
+}
+
+h2{
+    font-size: 1em;
+    margin-top: -180px;
+    font-weight: bolder;
+    color: white;
+    text-shadow: 3px 2px 1px black;
+}
+
+/*Msg de vitoria*/
+
+#msg p{
+
+   position: absolute;
+   margin-left: auto;
+   margin-right: auto;
+   left: 0;
+   right: 0;
+   top: 150px;
+   width: 500px;
+   font-size: 5em;
+   background-color: rgba(0, 128, 0, 0.767);
+   color: white;
+   padding: 20px;
+   border-radius: 15px;
+   font-weight: bolder;
+   text-shadow: 2px 2px 1px black;
+   display: none;
+
+}

@@ -1,0 +1,69 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+
+body{
+    text-align: center;
+    background-image: url(fundo.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    font-family: Helvetica, sans-serif;
+}
+h1{
+    font-size: 8em;
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+    text-shadow: 1px 1px 5px black;
+}
+
+#botoes button{
+    padding: 5px 10px;
+    margin: 5px;
+    border-radius: 3px;
+    border: none;
+    font-family: Verdana, sans-serif;
+}
+#container{
+    display: flex;
+    width: 900px;
+    margin: 0px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+.box{
+    height: 15vh;
+    border: 15px solid black;
+    box-sizing: border-box;
+    flex: 1 1 33%;
+}
+
+#bloco1, #bloco2, #bloco3{
+    border-top: none;
+  
+    
+}
+
+#bloco1,#bloco4,#bloco7 {
+    border-left: none;
+    
+    
+}
+
+#bloco7, #bloco8,#bloco9{
+    border-bottom: none;
+
+}
+
+#bloco3, #bloco6, #bloco9{
+    border-right: none;
+    
+ 
+}
+

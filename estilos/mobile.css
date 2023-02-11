@@ -1,7 +1,0 @@
-/*Mobile e tablets*/
-
-@media screen and (min-width:600px) {
-   h1{
-    color: navy ;
-   }
-}

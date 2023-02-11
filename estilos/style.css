@@ -29,8 +29,8 @@ h1{
 
 #botoes button{
     background-color: white;
-    height: 40px;
-    padding: 5px 10px;
+    font-size: 50px;
+    
     margin: 10px;
     border-radius: 10px;
     border: none;
@@ -76,6 +76,7 @@ h1{
 
 /*simbolos*/
 .x{
+    margin-top: 3px;
     font-size: 70px;
     color: red;
     display: inline-block;

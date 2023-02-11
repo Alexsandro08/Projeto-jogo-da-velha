@@ -1,27 +1,65 @@
-@media screen and (min-width: 600px){
+@media screen and (min-width: 600px){ /*Mobile*/
     h1{
         font-size: 8em;
     }
+    h2{
+        margin-top: -105px;
+    }
     #container{
-        display: flex;
-        width: 600px;
         margin: 0px;
-        flex-direction: row;
-        flex-wrap: wrap;
-        position: relative;
-        margin-left: auto;
-        margin-right: auto;
-    
     }
     .box{
-        height: 200px;
+        height: 11vh;
         border: 10px solid black;
-        box-sizing: border-box;
-        flex: 1 1 33%;
+       
+       
+    }
+    #scoreboard{
+        height: 4vh;
+        width: 400px;
+        margin-top: 200px;
+        font-size: 5em;
+        
+    }
+    #botoes button{
+        background-color: white;
+        height: 70px;
+        padding: 5px 10px;
+        margin: 20px;
+        border-radius: 20px;
+        font-size: 2em;
+       
+    }
+
+    #o-scoreboard{
+        width: 50px;
+        height:50px;
+        border: 10px solid blue;
+        border-radius: 50%;
+    
+    }
+    .x{
+        margin-top: 40px;
+        font-size: 150px;
+    }
+    .o{
+        width: 70px;
+        height: 70px;
+        border: 15px solid blue;
+        border-radius: 50%;
+        display: inline-block;
+        margin-top: 40px;
+    
     }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) { /*Tablets*/
+    .box{
+        height: 15vh;
+        border: 10px solid black;
+       
+       
+    }
     #container{
         display: flex;
         width: 600px;
@@ -33,13 +71,24 @@
         margin-right: auto;
     
     }
+    #scoreboard{
+        height: 7vh;
+        width: 400px;
+        margin-top: 200px;
+        font-size: 5em;
+        
+    }
+  
     
 }
 
 
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 992px) { /*Desktop*/
     h1{
         font-size: 4em;
+    }
+    h2{
+        margin-top: -65px;
     }
 
     #container{
@@ -58,5 +107,49 @@
         border: 5px solid black;
         box-sizing: border-box;
         flex: 1 1 33%;
+    }
+    #scoreboard{
+        height: 8vh;
+        width: 300px;
+        font-size: 3em;
+        position: relative;
+        margin-left: 20px;
+        margin-right: 20px;
+        border-radius: 15px;
+    }
+
+    
+    #o-scoreboard{
+        width: 25px;
+        height: 25px;
+        border: 6px solid blue;
+       
+    
+    }
+
+    .x{
+        margin-top: 3px;
+        font-size: 70px;
+        color: red;
+        display: inline-block;
+        line-height: 100px;
+    
+    }
+    .o{
+        width: 40px;
+        height: 40px;
+        border: 8px solid blue;
+        border-radius: 50%;
+        display: inline-block;
+        margin-top: 17px;
+    
+    }
+    #botoes button{
+        font-size: 1em;
+        height: 50px;
+        width: 150px;
+        margin: 10px;
+        border-radius: 10px;
+      
     }
 }

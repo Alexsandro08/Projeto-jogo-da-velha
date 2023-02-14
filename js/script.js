@@ -25,6 +25,13 @@ for(let i= 0; i < boxes.length; i++){
 
         if(play01 == play02){
             play01++
+
+        if(secunPlay == "um player"){
+            play02++
+
+            computerPlay()
+
+        }
         }
         else{
             play02++
@@ -36,6 +43,29 @@ for(let i= 0; i < boxes.length; i++){
 
       
     })
+
+
+
+for(let i = 0; i < buttons.length; i++){
+    buttons[i].addEventListener("click", function(){
+        secunPlay = this.getAttribute("id")
+
+
+        for(let g = 0; g < buttons.length; g++){
+            buttons[g].style.display = 'none'
+        }
+
+        setTimeout(function(){
+
+            let cont = document.querySelector("#container")
+            cont.classList.remove("hide")
+
+        }, 300)
+    })
+
+}
+
+
 }
 function checar(play01, play02){
     
@@ -210,4 +240,30 @@ let boxs = document.querySelectorAll(".box div")
     }
 
 }
+function computerPlay(){
+    
+    let cloneO = o.cloneNode(true)
+    contador = 0
+    preen = 0
 
+    for(let i = 0; i < boxes.length; i++){
+
+        let num = Math.floor(Math.random() *5)
+
+        if(boxes[i].childNodes[0] == undefined){
+            if(num <= 1){
+                boxes[i].appendChild(cloneO)
+                contador++
+                break
+            } else{
+                preen++
+            }
+
+        }
+        
+    }
+    if(contador == 0 && preen < 9){
+        computerPlay()
+            
+}
+}

@@ -23,13 +23,17 @@ for(let i= 0; i < boxes.length; i++){
 
         this.appendChild(elementoClone)
 
+           
+
         if(play01 == play02){
             play01++
+            
+            
 
         if(secunPlay == "um player"){
             play02++
 
-            computerPlay()
+             computerPlay()
 
         }
         }
@@ -240,30 +244,30 @@ let boxs = document.querySelectorAll(".box div")
     }
 
 }
-function computerPlay(){
-    
-    let cloneO = o.cloneNode(true)
-    contador = 0
-    preen = 0
-
-    for(let i = 0; i < boxes.length; i++){
-
-        let num = Math.floor(Math.random() *5)
-
-        if(boxes[i].childNodes[0] == undefined){
-            if(num <= 1){
-                boxes[i].appendChild(cloneO)
-                contador++
-                break
-            } else{
-                preen++
+function computerPlay() {
+ 
+    let cloneO = o.cloneNode(true);
+    counter = 0;
+    filled = 0;
+ 
+    for(let i = 0; i < boxes.length; i++) {
+ 
+        let randomNumber = Math.floor(Math.random() * 5);
+ 
+       
+        if(boxes[i].childNodes[0] == undefined) {
+            if(randomNumber <= 1) {
+                boxes[i]. appendChild(cloneO);
+                counter++;
+                break;
             }
-
+       
+        } else {
+            filled++;
         }
-        
     }
-    if(contador == 0 && preen < 9){
-        computerPlay()
-            
-}
+ 
+    if(counter == 0 && filled < 9) {
+        computerPlay();
+    }
 }

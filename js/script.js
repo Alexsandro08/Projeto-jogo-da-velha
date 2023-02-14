@@ -69,10 +69,10 @@ function checkWin(){
         let b3 = bloc3.childNodes[0].className
 
         if(b1 == "x" && b2 == "x" && b3 == "x"){
-            console.log("X venceu")
+            declaVencedor('x')
 
         } else if(b1 == "o" && b2 == "o" && b3 == "o"){
-            console.log("O venceu")
+            declaVencedor('o')
 
         }
         
@@ -82,10 +82,10 @@ function checkWin(){
         let b6 = bloc6.childNodes[0].className
 
         if(b4 == "x" && b5 == "x" && b6 == "x"){
-            console.log("X venceu")
+            declaVencedor('x')
 
         } else if(b4 == "o" && b5 == "o" && b6 == "o"){
-            console.log("O venceu")
+            declaVencedor('o')
 
         }
         
@@ -96,10 +96,10 @@ function checkWin(){
         let b9 = bloc9.childNodes[0].className
         
         if(b7 == "x" && b8 == "x" && b9 == "x"){
-            console.log("X venceu")
+            declaVencedor('x')
 
         } else if(b7 == "o" && b8 == "o" && b9 == "o"){
-            console.log("O venceu")
+            declaVencedor('o')
 
         }
     } if(bloc1.childNodes.length > 0 && bloc5.childNodes.length > 0 && bloc9.childNodes.length > 0){
@@ -108,10 +108,10 @@ function checkWin(){
         let b9 = bloc9.childNodes[0].className
         
         if(b1 == "x" && b5 == "x" && b9 == "x"){
-            console.log("X venceu")
+            declaVencedor("x")
 
         } else if(b1 == "o" && b5 == "o" && b9 == "o"){
-            console.log("O venceu")
+            declaVencedor("o")
 
         }
     } if(bloc3.childNodes.length > 0 && bloc5.childNodes.length > 0 && bloc7.childNodes.length > 0){
@@ -120,10 +120,10 @@ function checkWin(){
         let b7 = bloc7.childNodes[0].className
         
         if(b3 == "x" && b5 == "x" && b7 == "x"){
-            console.log("X venceu")
+            declaVencedor('x')
 
         } else if(b3 == "o" && b5 == "o" && b7 == "o"){
-            console.log("O venceu")
+            declaVencedor('o')
 
         }
     } if(bloc1.childNodes.length > 0 && bloc4.childNodes.length > 0 && bloc7.childNodes.length > 0){
@@ -132,10 +132,10 @@ function checkWin(){
         let b7 = bloc7.childNodes[0].className
         
         if(b1 == "x" && b4 == "x" && b7 == "x"){
-            console.log("X venceu")
+            declaVencedor('x')
 
         } else if(b1 == "o" && b4 == "o" && b7 == "o"){
-            console.log("O venceu")
+            declaVencedor('o')
 
         }
     }if(bloc2.childNodes.length > 0 && bloc5.childNodes.length > 0 && bloc8.childNodes.length > 0){
@@ -144,22 +144,22 @@ function checkWin(){
         let b8 = bloc8.childNodes[0].className
         
         if(b2 == "x" && b5 == "x" && b8 == "x"){
-            console.log("X venceu")
+            declaVencedor('x')
 
         } else if(b2 == "o" && b5 == "o" && b8 == "o"){
-            console.log("O venceu")
+            declaVencedor('o')
 
-        }
+        
     }if(bloc3.childNodes.length > 0 && bloc6.childNodes.length > 0 && bloc9.childNodes.length > 0){
         let b3 = bloc3.childNodes[0].className
         let b6 = bloc6.childNodes[0].className
         let b9 = bloc9.childNodes[0].className
         
         if(b3 == "x" && b6 == "x" && b9 == "x"){
-            console.log("X venceu")
+            declaVencedor('x')
 
         } else if(b3 == "o" && b6 == "o" && b9 == "o"){
-            console.log("O venceu")
+            declaVencedor('o')
 
         }
     }
@@ -171,8 +171,43 @@ function checkWin(){
         }
     }
     if(contador == 9){
-        console.log("EMPATE")
+        declaVencedor("EMPATE")
     }
-
+}
 
 }
+function declaVencedor(winner){
+    
+    let winX = document.querySelector("#scoreboard1")
+    let winO = document.querySelector("#scoreboard2")
+    let msg = ''
+
+    if(winner == 'x'){
+        winX.textContent = parseInt(winX.textContent) +1
+        msg = 'Jogador 1 Venceu'
+
+
+    } else if(winner == 'o'){
+        winO.textContent = parseInt(winO.textContent) +1
+        msg = 'Jogador 2 Venceu'
+
+    } else{
+        msg = 'EMPATE'
+    }
+msgtxt.innerHTML = msg
+msgs.classList.remove("hide")
+setTimeout(function(){
+
+    msgs.classList.add("hide")
+}, 2000)
+
+play01 = 0
+play02 = 0
+
+let boxs = document.querySelectorAll(".box div")
+    for(let i= 0; i < boxs.length; i++){
+        boxs[i].parentNode.removeChild(boxs[i])
+    }
+
+}
+
